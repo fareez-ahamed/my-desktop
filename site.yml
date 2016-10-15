@@ -1,0 +1,7 @@
+---
+- name: My Desktop
+  hosts: local
+  connection: local
+  sudo: yes
+  roles:
+    - php
