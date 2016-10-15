@@ -4,4 +4,5 @@
   connection: local
   sudo: yes
   roles:
+    - common
     - php

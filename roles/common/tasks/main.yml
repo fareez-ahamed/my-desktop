@@ -1,0 +1,6 @@
+---
+- name: Git
+  apt: name=git state=present
+
+- name: CURL
+  apt: name=curl state=present

@@ -1,0 +1,11 @@
+---
+- name: PHP and PHP Extensions
+  apt: name={{ item }} state=present
+  with_items:
+    - php
+    - php-cli
+    - php-fpm
+    - php-mysql
+    - php-xml
+    - php-mbstring
+    - php-tokenizer
