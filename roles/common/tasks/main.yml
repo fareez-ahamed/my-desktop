@@ -1,6 +1,8 @@
 ---
 - name: Git
+  sudo: yes
   apt: name=git state=present
 
 - name: CURL
+  sudo: yes
   apt: name=curl state=present

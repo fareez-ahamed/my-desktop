@@ -1,5 +1,6 @@
 ---
 - name: PHP and PHP Extensions
+  sudo: yes
   apt: name={{ item }} state=present
   with_items:
     - php
@@ -9,3 +10,6 @@
     - php-xml
     - php-mbstring
     - php-tokenizer
+    - php-zip
+
+# - include: composer.yml

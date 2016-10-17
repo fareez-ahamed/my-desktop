@@ -1,0 +1,28 @@
+---
+
+- name: Install MySQL client
+  sudo: yes
+  apt:
+    name: mariadb-client
+    state: present
+
+- block:
+  - name: Install MariaDB MySQL server
+    sudo: yes
+    apt:
+      name: mariadb-server
+      state: present
+
+  - name: Restart MariaDB MySQL Server
+    service:
+      sudo: yes
+      name: mysql
+      state: restarted
+      enabled: true
+
+  - name: Set root user password
+    mysql_user:
+      name: root
+      password: "123456"
+      check_implicit_admin: yes
+      state: present
